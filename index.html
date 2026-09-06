@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Bible Reader</title>
+    <style>
+        :root {
+            --bg-color: #f9f9fb;
+            --text-color: #2c3e50;
+            --card-bg: #ffffff;
+            --accent-color: #3498db;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+        }
+
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-family: sans-serif;
+            color: #1a202c;
+        }
+
+        .selectors {
+            display: flex;
+            gap: 10px;
+        }
+
+        select {
+            padding: 8px 12px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            font-size: 0.95rem;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .chapter-title {
+            text-align: center;
+            font-family: sans-serif;
+            margin-bottom: 2rem;
+            color: #4a5568;
+        }
+
+        .verse {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .verse-num {
+            font-family: sans-serif;
+            font-size: 0.75rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            vertical-align: super;
+            margin-right: 4px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-family: sans-serif;
+            font-size: 0.85rem;
+            color: #718096;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bible App</h1>
+        <div class="selectors">
+            <select id="book-select">
+                <option value="genesis">Genesis</option>
+                <option value="exodus">Exodus</option>
+                <option value="john" selected>John</option>
+            </select>
+            <select id="chapter-select">
+                <option value="1">Chapter 1</option>
+                <option value="2">Chapter 2</option>
+                <option value="3" selected>Chapter 3</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <h2 class="chapter-title">John 3</h2>
+        
+        <article id="bible-text">
+            <p class="verse"><span class="verse-num">1</span>Now there was a Pharisee, a man named Nicodemus who was a member of the Jewish ruling council.</p>
+            <p class="verse"><span class="verse-num">2</span>He came to Jesus at night and said, "Rabbi, we know that you are a teacher who has come from God. For no one could perform the signs you are doing if God were not with him."</p>
+            <p class="verse"><span class="verse-num">3</span>Jesus replied, "Very truly I tell you, no one can see the kingdom of God unless they are born again."</p>
+            <p class="verse"><span class="verse-num">16</span>For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.</p>
+        </article>
+    </main>
+
+    <footer>
+        <p>Public Domain Bible Text Structure</p>
+    </footer>
+
+</body>
+</html>
